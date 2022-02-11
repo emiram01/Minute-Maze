@@ -1,0 +1,74 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4823561825106954685
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1242917204938208583}
+  - component: {fileID: 1367084117328545601}
+  m_Layer: 0
+  m_Name: EasyMazeGenerator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1242917204938208583
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4823561825106954685}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1367084117328545601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4823561825106954685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5414d245fd4aba429642f2ad696fcec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mazeComplete: 0
+  _cellPrefab: {fileID: 5656891650401752413, guid: fb797e663a800eb499eac46a32b5a199,
+    type: 3}
+  _passagePrefab: {fileID: 3603245342738866778, guid: 729dc745bb8ac654e9cc86608f0ed100,
+    type: 3}
+  _wallPrefab: {fileID: 4020152006803884894, guid: 1c78d6c992d3b4d4f8948dd441ff632f,
+    type: 3}
+  _doorPrefab: {fileID: 4814400819391904271, guid: f1c0f62e9d6ff4c47b14d2ae891e9296,
+    type: 3}
+  _size: {x: 14, y: 14}
+  _doorProbablity: 0.4
+  _generationDelay: 0
+  _roomSettings:
+  - floor: {fileID: 5656891650401752413, guid: b888a85547956da4b9730bb3291da9fa, type: 3}
+    wall: {fileID: 4020152006803884894, guid: a1c9df0f96355c444b01bb6d1f1fd69e, type: 3}
+  - floor: {fileID: 5656891650401752413, guid: b888a85547956da4b9730bb3291da9fa, type: 3}
+    wall: {fileID: 4020152006803884894, guid: a1c9df0f96355c444b01bb6d1f1fd69e, type: 3}
+  - floor: {fileID: 5656891650401752413, guid: b888a85547956da4b9730bb3291da9fa, type: 3}
+    wall: {fileID: 4020152006803884894, guid: a1c9df0f96355c444b01bb6d1f1fd69e, type: 3}
+  - floor: {fileID: 5656891650401752413, guid: b888a85547956da4b9730bb3291da9fa, type: 3}
+    wall: {fileID: 4020152006803884894, guid: a1c9df0f96355c444b01bb6d1f1fd69e, type: 3}
+  - floor: {fileID: 5656891650401752413, guid: b888a85547956da4b9730bb3291da9fa, type: 3}
+    wall: {fileID: 4020152006803884894, guid: a1c9df0f96355c444b01bb6d1f1fd69e, type: 3}
+  - floor: {fileID: 5656891650401752413, guid: b888a85547956da4b9730bb3291da9fa, type: 3}
+    wall: {fileID: 4020152006803884894, guid: a1c9df0f96355c444b01bb6d1f1fd69e, type: 3}
+  - floor: {fileID: 5656891650401752413, guid: b888a85547956da4b9730bb3291da9fa, type: 3}
+    wall: {fileID: 4020152006803884894, guid: a1c9df0f96355c444b01bb6d1f1fd69e, type: 3}
+  - floor: {fileID: 5656891650401752413, guid: b888a85547956da4b9730bb3291da9fa, type: 3}
+    wall: {fileID: 4020152006803884894, guid: a1c9df0f96355c444b01bb6d1f1fd69e, type: 3}
