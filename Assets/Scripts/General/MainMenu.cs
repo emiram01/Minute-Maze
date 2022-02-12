@@ -30,6 +30,7 @@ public class MainMenu : MonoBehaviour
 
     public IEnumerator LoadMaze(int difficulty)
     {
+        Cursor.visible = false;
         _anim.SetTrigger("Start");
         yield return new WaitForSeconds(2.5f);
         SceneManager.LoadScene(difficulty);

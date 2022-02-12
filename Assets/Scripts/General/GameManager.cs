@@ -17,8 +17,10 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject _arms;
 
     [Header("Camera Settings")]
-    [SerializeField] private Vector3 _camPosition;
+    [SerializeField] private Transform _camMazeView;
     [SerializeField] private CameraManager _cam;
+    [SerializeField] private GameObject _playerLocation;
+    [SerializeField] private GameObject _crossHair;
 
     [Header("Timer Settings")]
     [SerializeField] private int _countDownTime;
@@ -74,7 +76,7 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator Begin()
     {
-        _cam.transform.position = _camPosition;
+        _cam.transform.position = _camMazeView.position;
         yield return new WaitForSeconds(2.75f);
         _anim.gameObject.SetActive(false);
         Generation();
@@ -82,11 +84,12 @@ public class GameManager : MonoBehaviour
         foreach(GameObject go in _introText)
             go.SetActive(false);
 
-        _cam.ChangeProjection();
+        _cam.ChangeProjection(false);
         _cam.mazeView = false;
         _canPause = true;
         _cam.transform.rotation = Quaternion.Euler(90f, 0f, 0f);
         _arms.SetActive(true);
+        _crossHair.SetActive(true);
         _player.transform.position = _spawn;
         _player.gameObject.SetActive(true);
         _countdown = true;
@@ -117,13 +120,29 @@ public class GameManager : MonoBehaviour
     #region States
     private IEnumerator GameOver()
     {
+        _playerLocation.transform.position = new Vector3(_player.position.x, _player.position.y + 10f, _player.position.z);
         _countdown = false;
         _audio.Play("gameOver");
         _playerManager.LockPlayer(false);
         _gameOveranim.SetTrigger("GameOver");
         yield return new WaitForSeconds(1f);
+        _crossHair.SetActive(false);
         _gameOverText.SetActive(true);
         yield return new WaitForSeconds(2.75f);
+        _timeUI.gameObject.SetActive(false);
+        _gameOverText.SetActive(false);
+        _gameOveranim.gameObject.SetActive(false);
+        _playerLocation.SetActive(true);
+        _cam.mazeView = true;
+        _arms.SetActive(false);
+        _player.gameObject.SetActive(false);
+        _cam.transform.position = _camMazeView.position;
+        _cam.transform.rotation = _camMazeView.rotation;
+        _cam.ChangeProjection(true);
+        foreach(GameObject go in _introText)
+            go.SetActive(true);
+        
+        yield return new WaitForSeconds(3.5f);
         _gem.GetComponent<MazeEnding>().EndGame();
     }
 

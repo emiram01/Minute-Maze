@@ -57,9 +57,9 @@ public class CameraManager : MonoBehaviour
             CameraMovement();
     }
 
-    public void ChangeProjection()
+    public void ChangeProjection(bool b)
     {
-        _camera.orthographic = false;
+        _camera.orthographic = b;
     }
     
     private void CameraMovement()
