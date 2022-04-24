@@ -8,6 +8,8 @@ Built using [Unity2D](https://unity.com/) and C#.
 Most models and animations were made by me using [Blender](https://www.blender.org/). 
 More info on the maze generation process can be found at [Catlike Coding](https://catlikecoding.com/).
 
+Credits for the sound effects goes to [SoundBible](https://soundbible.com/).
+
 
 ## 🎞 Demo
 
