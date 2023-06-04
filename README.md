@@ -4,7 +4,7 @@
 
 Minute Maze is a procedural 3D maze simulator where the player has one minute to escape.
 
-Built using [Unity2D](https://unity.com/) and C#. 
+Built using [Unity3D](https://unity.com/) and C#. 
 Most models and animations were made by me using [Blender](https://www.blender.org/). 
 More info on the maze generation process can be found at [Catlike Coding](https://catlikecoding.com/).
 
